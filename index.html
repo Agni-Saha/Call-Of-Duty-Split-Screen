@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call of Duty | Vanguard | Split Screen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- This will contain the whole layout -->
+    <main class="banner-wrapper">
+        <!-- banner which expands on hover -->
+        <section class="banner" id="banner-1">
+            <h1>Call<span class="_of1">of</span>Duty <br> <span class="_van">Vanguard</span></h1>
+            <div class="banner__btns">
+                <button class="active">CAMPAIGN</button>
+                <button>MULTIPLAYER</button>
+                <button>ZOMBIES</button>
+            </div>
+            <div class="banner__stat">
+                <img src="./Assets/people.png" />
+                <p><span class="stat-text">Friends playing</span> <span> 12 </span></p>
+            </div>
+        </section>
+
+        <section class="banner" id="banner-2">
+            <h1>Call<span class="_of2">of</span>Duty <br><span class="_war">warzone</span></h1>
+            <div class="banner__btns">
+                <button class="active">PLAY NOW</button>
+            </div>
+            <div class="banner__stat">
+                <img src="./Assets/people.png" />
+                <p><span class="stat-text">Friends playing</span> <span> 12 </span></p>
+            </div>
+        </section>
+
+        <section class="banner" id="banner-3">
+            <h1>Call<span class="_of1">of</span>Duty <br> <span class="_van _ops">Black ops</span><br> <span
+                    class="_van _cold">COLD WAR</span></h1>
+            <div class="banner__btns">
+                <button class="active">CAMPAIGN</button>
+                <button>MULTIPLAYER</button>
+                <button>ZOMBIES</button>
+                <button>League Play</button>
+            </div>
+            <div class="banner__stat">
+                <img src="./Assets/people.png" />
+                <p><span class="stat-text">Friends playing</span> <span> 12 </span></p>
+            </div>
+        </section>
+
+        <section class="banner" id="banner-4">
+            <h1>Call<span class="_of2">of</span>Duty <br><span class="_war"><span class="_mod">Modern</span> <br>
+                    Warfare</span></h1>
+            <div class="banner__btns">
+                <button class="active">CAMPAIGN</button>
+                <button>MULTIPLAYER</button>
+                <button>CO-OP</button>
+            </div>
+            <div class="banner__stat">
+                <img src="./Assets/people.png" />
+                <p><span class="stat-text">Friends playing</span> <span> 12 </span></p>
+            </div>
+        </section>
+        <!-- other small details later back select start install accessibility settings-->
+        <section id="menu">
+            <div class="item">
+                <img src="./Assets/circle.png" style="filter: invert(5); " />
+                <span>Back</span>
+            </div>
+            <div class="item">
+                <img src="./Assets/cross.png" />
+                <span>Select</span>
+            </div>
+            <div class="item">
+                <img src="./Assets/square.png" />
+                <span>Start Install</span>
+            </div>
+            <div class="item">
+                <img src="./Assets/L3.png">
+                <span>Accessibility</span>
+            </div>
+            <div class="item">
+                <span class="_pill"></span>
+                <span>Settings</span>
+            </div>
+        </section>
+        <div class="device-info">
+            <h1>This is a PC Game clone. Please view it in a screen with size greater than 1200px.</h1>
+        </div>
+    </main>
+
+    <script>
+        const bannerWrapper = document.querySelector('.banner-wrapper')
+        const banners = document.querySelectorAll('.banner')
+        banners.forEach(item => item.addEventListener('mouseover', function (event) {
+            this.classList.add('active');
+            if (event.target.id === 'banner-1') {
+                bannerWrapper.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('./Assets/3.jpg')`
+            } else if (event.target.id === 'banner-2') {
+                bannerWrapper.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('./Assets/1.png')`
+            } else if (event.target.id === 'banner-3') {
+                bannerWrapper.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('./Assets/2.jpg')`
+            } else if (event.target.id === 'banner-4') {
+                bannerWrapper.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('./Assets/1.jpg')`
+            }
+        }));
+        banners.forEach(item => item.addEventListener('mouseleave', function () {
+            this.classList.remove('active');
+        }));
+    </script>
+</body>
+
+</html>
+<!-- https://pixiedust07.github.io/cod_clone/ -->
